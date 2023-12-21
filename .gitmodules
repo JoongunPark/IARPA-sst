@@ -1,0 +1,15 @@
+[submodule "DRAMSim3"]
+	path = sst-src/DRAMSim3
+	url = git@github.com:umd-memsys/DRAMsim3.git
+[submodule "sst-core"]
+	path = sst-src/sst-core
+	url = git@github.com:JoongunPark/sst-core.git 
+	branch = Phase1
+[submodule "sst-elements"]
+	path = sst-src/sst-elements
+	url = git@github.com:georgia-tech-synergy-lab/IARPA-sst-elements.git 
+	branch = Phase1
+[submodule "sst-scripts"]
+	path = sst-src/sst-scripts
+	url = git@github.com:georgia-tech-synergy-lab/IARPA-sst-scripts.git 
+	branch = Phase1

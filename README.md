@@ -1,5 +1,7 @@
 ## Clone this repo in home directory
+```
 git clone --recurse-submodules git@github.com:JoongunPark/IARPA-sst.git sst
+```
 
 ## Build SST
 * Install prerequisites
@@ -101,4 +103,16 @@ cd sst-src/sst-elements
 ./configure --prefix=$SST_ELEMENTS_HOME --with-dramsim3=$DRAMSIM3_HOME --with-sst-core=$SST_HOME_PATH/sst-core
 make all –j$(nproc)
 make install –j$(nproc)
+```
+
+* How to run the code
+```
+cd sst-src/sst-scripts/sst-scripts/arbiter/Phase1/
+
+# Single core
+sst withoutCache.py --model-options="--packet_count=10000"
+# Multi miranda core
+sst withoutCacheMultiCore.py --model-options="--packet_count=10000"
+# Multi miranda core with failed security check
+sst withoutCacheMultiCoreWrongAccess.py --model-options="--packet_count=10000"
 ```

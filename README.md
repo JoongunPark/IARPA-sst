@@ -109,10 +109,19 @@ make install –j$(nproc)
 ```
 cd sst-src/sst-scripts/sst-scripts/arbiter/Phase1/
 
-# Single core
+# Single Miranda core
+cd ./Miranda/
 sst withoutCache.py --model-options="--packet_count=10000"
+
 # Multi miranda core
+cd ./Miranda/
 sst withoutCacheMultiCore.py --model-options="--packet_count=10000"
+
 # Multi miranda core with failed security check
+cd ./Miranda/
 sst withoutCacheMultiCoreWrongAccess.py --model-options="--packet_count=10000"
+
+# Single Vanadis core (default binary: Hello World)
+cd ./Vanadis/
+sst roundrobinarb_vanadis.py
 ```

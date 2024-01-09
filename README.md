@@ -113,15 +113,27 @@ cd sst-src/sst-scripts/sst-scripts/arbiter/Phase1/
 cd ./Miranda/
 sst withoutCache.py --model-options="--packet_count=10000"
 
-# Multi miranda core
+# Multi Miranda core
 cd ./Miranda/
 sst withoutCacheMultiCore.py --model-options="--packet_count=10000"
 
-# Multi miranda core with failed security check
+# Multi Miranda core with failed security check
 cd ./Miranda/
 sst withoutCacheMultiCoreWrongAccess.py --model-options="--packet_count=10000"
 
 # Single Vanadis core (default binary: Hello World)
 cd ./Vanadis/
 sst roundrobinarb_vanadis.py
+
+# Multi Vanadis core (default binary: Hello World x 2)
+cd ./Vanadis/
+sst MultiCore.py
+
+# Multi Vanadis core with failed security check (default binary: Hello World x 2)
+cd ./Vanadis/
+sst MultiCoreWrongAccess.py
+
+# 5 Scenarios with Arbiter (below example is scenario1)
+cd ./Miranda/Topo_Variations
+sst config_multi_core_ring_merlin_arbiter_memctrl_1_pe_scenario1.py --model-options="--packet_count=10000"
 ```
